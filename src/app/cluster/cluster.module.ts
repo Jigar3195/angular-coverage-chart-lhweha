@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './cluster.routing';
 import { ClusterComponent } from './cluster.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
+import { SharedModule } from '../shared.module';
 
 
 
@@ -11,6 +12,7 @@ import {MatTabsModule} from '@angular/material/tabs';
   imports: [
     CommonModule,
     MatTabsModule,
+    SharedModule,
     RouterModule.forChild(rootRouterConfig)
   ],
   declarations: [

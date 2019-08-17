@@ -6,7 +6,7 @@ export const rootRouterConfig: Routes = [
     component: AdminLayoutComponent,
     children: [
       {
-        path: 'cluster',
+        path: 'cluster/:id',
         loadChildren: './cluster/cluster.module#ClusterModule'
       }
     ]

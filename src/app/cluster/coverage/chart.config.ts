@@ -1,4 +1,4 @@
-import { ViewChild, ElementRef } from '@angular/core';
+import { ViewChild } from "@angular/core";
 
 export class ChartConfig {
 
@@ -15,7 +15,8 @@ export class ChartConfig {
   public pieChartData = [];
   public pieChartColors: any;
 
-  @ViewChild('chartContainer') chartContainer;
+  @ViewChild('chartContainer', null) chartContainer;
+
 
   chart: anychart.charts.Polar = null;
   legend = anychart.standalones.legend();
@@ -101,21 +102,21 @@ export class ChartConfig {
       // console.log(typeof this.getData('deviceType'));
       // tablet.png
       if (!this.getData('deviceType')) {
-        src = 'assets/images/devices/device_unknown.png';
+        src = '../../assets/images/devices/device_unknown.png';
       } else if (this.getData('deviceType') === 'Mobile') {
-        src = 'assets/images/devices/android.png';
+        src = '../../assets/images/devices/android.png';
       } else if (this.getData('deviceType') === 'Apple Device') {
-        src = 'assets/images/devices/apple.png';
+        src = '../../assets/images/devices/apple.png';
       } else if (this.getData('deviceType') === 'Computer') {
-        src = 'assets/images/devices/laptop.png';
+        src = '../../assets/images/devices/laptop.png';
       } else if (this.getData('deviceType') === 'Printer') {
-        src = 'assets/images/devices/printer.png';
+        src = '../../assets/images/devices/printer.png';
       } else if (this.getData('deviceType') === 'Tablet') {
-        src = 'assets/images/devices/tablet.png';
+        src = '../../assets/images/devices/tablet.png';
       } else if (this.getData('deviceType') === 'wifi') {
-        src = 'assets/images/devices/wifi.png';
+        src = '../../assets/images/devices/wifi.png';
       } else {
-        src = 'assets/images/devices/device_unknown.png';
+        src = '../../assets/images/devices/device_unknown.png';
       }
       return {
         src: src,
